@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 11 17:09:27 2019
+
+@author: abigailbernhardt
+"""
+#%%
+import numpy as np
+
+N=100
+Eq1=np.zeros(N)
+Eq2=np.zeros(N)
+Eq3=np.zeros(N)
+
+x=1
+y=1
+z=2
+
+for i in range (2, N):
+    Eq1[i]=((i**3)-1)/((i**3)+1)
+    x=Eq1[i]*x
+    Eq1[i]=x
+    
+for i in range (1,N):
+    Eq2[i]=np.exp((i/100))/(i**10)
+    y=Eq2[i]*y
+    Eq2[i]=y
+    
+    Eq3[i]=(4/((i**2)))
+    z=Eq3[i]*z
+    Eq3[i]=z
+    
+print('The first 15 terms of the first sequence are ',Eq1[0:15])
+print('The last 15 terms of the first sequence are ',Eq1[-15:])
+print('The first 15 terms of the second sequence are ',Eq2[0:15])
+print('The last 15 terms of the second sequence are ',Eq2[-15:])
+print('The first 15 terms of the last sequence are ',Eq3[0:15])
+print('The last 15 terms of the last sequence are ',Eq3[-15:])
