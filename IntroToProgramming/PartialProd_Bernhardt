@@ -15,7 +15,7 @@ Eq3=np.zeros(N)
 
 x=1
 y=1
-z=2
+z=1
 
 for i in range (2, N):
     Eq1[i]=((i**3)-1)/((i**3)+1)
